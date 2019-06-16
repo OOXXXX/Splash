@@ -9,8 +9,20 @@
 import SwiftUI
 
 struct ContentView : View {
-    var body: some View {
-        Text("Hello World")
+    var body: some View{
+        
+        List(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
+            Image(systemName: "photo")
+            
+            VStack(alignment: .leading) {
+                Text("Hello World")
+                Text("Welcome to Swift UI")
+                .font(.subheadline)
+                .foregroundColor(.gray)
+                
+            }
+        }
+        
     }
 }
 
