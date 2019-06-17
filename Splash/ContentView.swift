@@ -10,19 +10,21 @@ import SwiftUI
 
 struct ContentView : View {
     var body: some View{
-        
-        List(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
-            Image(systemName: "photo")
-            
-            VStack(alignment: .leading) {
-                Text("Hello World")
-                Text("Welcome to Swift UI")
-                .font(.subheadline)
-                .foregroundColor(.gray)
+    
+        NavigationView{
+            List(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
+                Image(systemName: "photo")
                 
-            }
+                VStack(alignment: .leading) {
+                    Text("Hello World")
+                    Text("Welcome to Swift UI")
+                        .font(.subheadline)
+                        .foregroundColor(.gray)
+                    
+                }
+                }
+    .navigationBarTitle(Text("Swift"), displayMode: .large)
         }
-        
     }
 }
 
@@ -33,3 +35,6 @@ struct ContentView_Previews : PreviewProvider {
     }
 }
 #endif
+
+
+
